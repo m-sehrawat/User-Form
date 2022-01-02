@@ -2,8 +2,8 @@ export const FormInput = ({ submit, handleChange, isMarried }) => {
     return (
         <>
             <nav className="navbar navbar-light bg-light ">
-                <div className="container-fluid justify-content-center">
-                    <button type="button" className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Fill the form</button>
+                <div className="container-fluid justify-content-end">
+                    <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Fill the form</button>
                 </div>
             </nav>
 

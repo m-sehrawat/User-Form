@@ -20,8 +20,9 @@ export const Table = ({ form, deleteData, sortLH, sortHL, filterDepartment }) =>
     return (
         <div className="tableBox">
             <p className="display-6 text-center">Users Database</p>
-            <button onClick={sortLH}>Salary L-H</button>
-            <button onClick={sortHL}>Salary H-L</button>
+            <div className="input-group mb-3">
+            <button onClick={sortLH} className="btn btn-outline-secondary">Salary Low-High</button>
+            <button onClick={sortHL} className="btn btn-outline-secondary">Salary High-Low</button>
 
             <select onChange={(e) => filterDepartment(e.target.value)} className="form-select" aria-label="Default select example">
                 <option defaultValue>Filter Department</option>
@@ -30,6 +31,7 @@ export const Table = ({ form, deleteData, sortLH, sortHL, filterDepartment }) =>
                 <option value="Sales">Sales</option>
                 <option value="DevOps">DevOps</option>
             </select>
+            </div>
 
             <table className="table table-striped">
                 <thead>
