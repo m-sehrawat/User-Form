@@ -1,7 +1,12 @@
-export const FormInput = ({submit, handleChange, isMarried}) => {
+export const FormInput = ({ submit, handleChange, isMarried }) => {
     return (
         <>
-            <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Fill the form</button>
+            <nav className="navbar navbar-light bg-light ">
+                <div className="container-fluid justify-content-center">
+                    <button type="button" className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Fill the form</button>
+                </div>
+            </nav>
+
 
             <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -14,13 +19,13 @@ export const FormInput = ({submit, handleChange, isMarried}) => {
                             <form onSubmit={submit}>
                                 <input onChange={handleChange} name="fullName" className="form-control mb-3" type="text" placeholder="Name" />
                                 <input onChange={handleChange} name="age" className="form-control mb-3" type="number" placeholder="Age" />
-                                <input onChange={handleChange} name="address" className="form-control mb-3" type="text" placeholder="Address" />
+                                <input onChange={handleChange} name="city" className="form-control mb-3" type="text" placeholder="City" />
                                 <select onChange={handleChange} className="form-select mb-3" name="department" id="">
                                     <option value="">Select Department</option>
-                                    <option value="marketing">Marketing</option>
-                                    <option value="developer">Developer</option>
-                                    <option value="sales">Sales</option>
-                                    <option value="programmer">Programmer</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Developer">Developer</option>
+                                    <option value="Sales">Sales</option>
+                                    <option value="DevOps">DevOps</option>
                                 </select>
                                 <input onChange={handleChange} name="salary" className="form-control mb-3" type="number" placeholder="Salary" />
                                 <div className="form-check mb-4">
@@ -29,7 +34,7 @@ export const FormInput = ({submit, handleChange, isMarried}) => {
                                 </div>
                                 <div className="modal-footer">
                                     <button type="button" className="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                                    <input type="submit" className="btn btn-success" />
+                                    <input type="submit" className="btn btn-success" data-bs-dismiss="modal" />
                                 </div>
                             </form>
                         </div>

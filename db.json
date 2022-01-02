@@ -1,0 +1,67 @@
+{
+  "user": [
+    {
+      "fullName": "Mohit",
+      "age": "23",
+      "city": "Delhi",
+      "department": "Marketing",
+      "salary": "45000",
+      "isMarried": false,
+      "id": 8
+    },
+    {
+      "fullName": "Deepak",
+      "age": "34",
+      "city": "Pune",
+      "department": "Developer",
+      "salary": "32000",
+      "isMarried": true,
+      "id": 9
+    },
+    {
+      "fullName": "Tarun",
+      "age": "21",
+      "city": "Mumbai",
+      "department": "Sales",
+      "salary": "20000",
+      "isMarried": false,
+      "id": 10
+    },
+    {
+      "fullName": "Shubham",
+      "age": "46",
+      "city": "Banglaore",
+      "department": "DevOps",
+      "salary": "80000",
+      "isMarried": true,
+      "id": 11
+    },
+    {
+      "fullName": "Rashmi",
+      "age": "32",
+      "city": "Shimla",
+      "department": "Marketing",
+      "salary": "60000",
+      "isMarried": true,
+      "id": 12
+    },
+    {
+      "fullName": "Saurabh",
+      "age": "19",
+      "city": "Indore",
+      "department": "Sales",
+      "salary": "14999",
+      "isMarried": false,
+      "id": 13
+    },
+    {
+      "fullName": "Gagan",
+      "age": "16",
+      "city": "Indore",
+      "department": "Marketing",
+      "salary": "12000",
+      "isMarried": false,
+      "id": 14
+    }
+  ]
+}

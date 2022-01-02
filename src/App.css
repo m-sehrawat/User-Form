@@ -1,0 +1,23 @@
+.tableBox {
+    width: 800px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.pageBox {
+    width: 170px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.loadingBox {
+    width: 200px;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.errorBox {
+    width: 420px;
+    margin: auto;
+    margin-top: 200px;
+}
