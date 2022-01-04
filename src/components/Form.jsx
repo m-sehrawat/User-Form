@@ -78,10 +78,10 @@ export const Form = () => {
 
         setIsLoading(true)
 
-        fetch(`http://localhost:3004/user?_page=${page}&_limit=5`)
+        fetch(`http://localhost:3004/user?_sort=salary&_order=asc&_page=${page}&_limit=5`)
             .then((res) => res.json())
             .then((res) => {
-                res.sort((a, b) => a.salary - b.salary)
+                // res.sort((a, b) => a.salary - b.salary)
                 setForm(res);
             })
             .catch((err) => {
@@ -97,10 +97,10 @@ export const Form = () => {
 
         setIsLoading(true)
 
-        fetch(`http://localhost:3004/user?_page=${page}&_limit=5`)
+        fetch(`http://localhost:3004/user?_sort=salary&_order=desc&_page=${page}&_limit=5`)
             .then((res) => res.json())
             .then((res) => {
-                res.sort((a, b) => b.salary - a.salary)
+                // res.sort((a, b) => b.salary - a.salary)
                 setForm(res);
             })
             .catch((err) => {
@@ -113,13 +113,13 @@ export const Form = () => {
     }
 
     const filterDepartment = (depart) => {
-console.log("working");
+        console.log("working");
         setIsLoading(true)
 
-        fetch(`http://localhost:3004/user?`)
+        fetch(`http://localhost:3004/user?department=${depart}&_page=${page}&_limit=5`)
             .then((res) => res.json())
             .then((res) => {
-                res = res.filter((element) => element.department === depart)
+                // res = res.filter((element) => element.department === depart)
                 setForm(res);
             })
             .catch((err) => {
@@ -144,6 +144,8 @@ console.log("working");
         postData(user);
     }
 
+    /*
+    //To show loading duing the data fetch, then use this
     return isLoading ? (
         <div className="loadingBox">
             <p className="display-6">...Loading</p>
@@ -154,6 +156,21 @@ console.log("working");
             <p className="display-6">Something went Wrong</p>
         </div>
     ) : (
+        <>
+            <FormInput submit={handleSubmit} handleChange={handleChange} isMarried={isMarried} />
+
+            < Table form={form} deleteData={deleteData} sortLH={sortLH} sortHL={sortHL} filterDepartment={filterDepartment} />
+
+            <div className="pageBox">
+                <p className="text-center h6 my-3">Page: {page} </p>
+                <button disabled={page === 1 ? true : false} onClick={() => setPage(page - 1)} className="btn btn-outline-success mx-2 px-3">Prev</button>
+                <button onClick={() => setPage(page + 1)} className="btn btn-outline-success mx-2 px-3">Next</button>
+            </div>
+        </>
+    );
+    */
+
+    return (
         <>
             <FormInput submit={handleSubmit} handleChange={handleChange} isMarried={isMarried} />
 

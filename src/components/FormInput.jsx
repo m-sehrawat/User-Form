@@ -20,7 +20,7 @@ export const FormInput = ({ submit, handleChange, isMarried }) => {
                                 <input onChange={handleChange} name="fullName" className="form-control mb-3" type="text" placeholder="Name" />
                                 <input onChange={handleChange} name="age" className="form-control mb-3" type="number" placeholder="Age" />
                                 <input onChange={handleChange} name="city" className="form-control mb-3" type="text" placeholder="City" />
-                                <select onChange={handleChange} className="form-select mb-3" name="department" id="">
+                                <select onChange={handleChange} className="form-select mb-3" name="department">
                                     <option value="">Select Department</option>
                                     <option value="Marketing">Marketing</option>
                                     <option value="Developer">Developer</option>
