@@ -37,15 +37,6 @@
       "id": 11
     },
     {
-      "fullName": "Rashmi",
-      "age": "32",
-      "city": "Shimla",
-      "department": "Marketing",
-      "salary": "60000",
-      "isMarried": true,
-      "id": 12
-    },
-    {
       "fullName": "Saurabh",
       "age": "19",
       "city": "Indore",

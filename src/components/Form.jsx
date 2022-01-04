@@ -24,9 +24,14 @@ export const Form = () => {
         setIsLoading(true)
 
         fetch(`http://localhost:3004/user?_page=${page}&_limit=5`)
-            .then((res) => res.json())
+            .then((res) => {
+                console.log(res.headers["X-total-count"]);
+                return res.json()
+            })
             .then((res) => {
                 console.log('res:', res)
+                // console.log(res.headers["X-Total-Count"]);
+
                 setForm(res);
             })
             .catch((err) => {
